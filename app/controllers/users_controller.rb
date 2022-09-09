@@ -18,7 +18,7 @@ class UsersController < ApplicationController
 
   def create
   
-    @user = User.new(params.require(:user).permit(:name, :email))
+    @user = User.new(params.require(:user).permit(:name, :email, :gender))
     # @article.user = User.first
     if @user.save
       flash[:notice] = "user was created successfully."
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
 def update
 
     @user = User.find(params[:id])
-    if @user.update(params.require(:user).permit(:name, :email))
+    if @user.update(params.require(:user).permit(:name, :email, :gender))
       flash[:notice] = "Article was updated successfully."
       redirect_to @user
     else

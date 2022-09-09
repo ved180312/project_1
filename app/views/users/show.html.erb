@@ -3,3 +3,10 @@
 <p><strong>Name </strong><%= @user.name %></p>
 <p><strong>Email: </strong><%= @user.email %></p>
 <p><strong>Gender: </strong><%= @user.gender %></p>
+
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Delete', user_path(@user), method: :delete, data: { confirm: "Are you sure?" } %> |
+<%= link_to 'Return to user detail', users_path %>
+

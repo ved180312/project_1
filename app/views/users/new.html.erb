@@ -20,7 +20,7 @@
         <%= f.email_field :email, Placeholder: "enter your mail" %> 
       </p>
     <p>
-        <%= f.label :gender %><br/> 
+       <%= f.label :gender %><br/> 
         <%= f.text_field :gender, Placeholder: "enter your gender" %> 
       </p>
 
@@ -28,3 +28,5 @@
         <%= f.submit %> 
       </p>
     <% end %>
+
+    <%= link_to 'Return to user detail', users_path %>
