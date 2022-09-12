@@ -1,0 +1,51 @@
+<h5>user login </h5>
+    <%= form_with scope: :session, url: login_path, local: true do |f| %>
+    
+    
+      <p>
+        <%= f.label :email %><br/> 
+        <%= f.email_field :email, Placeholder: "enter your mail" %> 
+      </p>
+
+       <p>
+        <%= f.label :password %><br/> 
+        <%= f.password_field :password, Placeholder: "enter password" %> 
+      </p>
+      <p>
+        <%= f.submit "login" %> 
+      </p>
+    <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+     <%
+=begin%>
+ <%= f.pasword_field :password_digest, Placeholder: "enter password" %>  
+<%
+=end%>

@@ -11,6 +11,39 @@
   </head>
 
   <body>
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <li><%= link_to 'Log in', login_path %>
+      </li>
+      <li><%= link_to 'Logout', logout_path, data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %>
+
+
+
+
+
+
+
+
+
+
+    <% flash.each do |name, msg| %>
+      <%= msg %>
+    <% end %> 
     <%= yield %>
   </body>
 </html>
